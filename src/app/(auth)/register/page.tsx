@@ -113,7 +113,7 @@ export default function Register() {
   return (
     <Wrapper position="center">
       <Container>
-        <div className="flex flex-col justify-center items-center gap-5">
+        <div className="flex flex-col justify-center items-center gap-5 ">
           <h1>РЕГИСТРАЦИЯ</h1>
           {wrongUsername && usernameError && (
             <div style={{ color: "red", fontSize: "15px" }}>
@@ -121,7 +121,7 @@ export default function Register() {
             </div>
           )}
           <input
-            className="bg-gray-200 rounded-md px-2"
+            className="bg-gray-200 rounded-full px-2"
             type="text"
             name="username"
             placeholder="имя"
@@ -132,7 +132,7 @@ export default function Register() {
             <div style={{ color: "red", fontSize: "15px" }}>{emailError}</div>
           )}
           <input
-            className="bg-gray-200 rounded-md px-2"
+            className="bg-gray-200 rounded-full px-2"
             type="text"
             name="email"
             placeholder="почта"
@@ -145,7 +145,7 @@ export default function Register() {
             </div>
           )}
           <input
-            className="bg-gray-200 rounded-md px-2"
+            className="bg-gray-200 rounded-full px-2"
             type="password"
             name="password"
             placeholder="пароль"
@@ -154,8 +154,8 @@ export default function Register() {
           ></input>
           <button
             disabled={!formValid}
-            className="bg-green-500 p-2 rounded-md disabled:bg-gray-300 disabled:text-gray-400"
-            onClick={() => registerUser()}
+            className="bg-green-500 p-2 rounded-full disabled:bg-green-200"
+            onClick={registerUser}
           >
             зарегистрироваться
           </button>

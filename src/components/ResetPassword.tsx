@@ -73,43 +73,48 @@ const ResetPassword = ({ onClose }: { onClose: any }) => {
   };
 
   return (
-    <div className="absolute left-0 right-0 top-0 bottom-0 m-auto h-[500px] w-[500px] flex flex-row justify-center items-center bg-slate-300 rounded-md shadow-2xl z-50">
+    <div
+      className="absolute left-0 right-0 top-0 bottom-0 m-auto h-[500px] w-[500px] 
+    flex flex-row justify-center items-center bg-slate-300 rounded-[5px] shadow-2xl"
+    >
       <button
-        className="absolute right-5 top-5 rounded-md flex flex-row justify-end items-end hover:rotate-90 transition-all duration-200"
-        onClick={(e) => handleCloseClick(e)}
-      >
-        <ImCross />
-      </button>
+          className="absolute right-5 top-5 rounded-md flex flex-row justify-end items-end hover:rotate-90 transition-all duration-200"
+          onClick={(e) => handleCloseClick(e)}
+        >
+          <ImCross />
+        </button>
+  
       <div className="flex flex-col gap-5 justify-center items-center">
         <h1 className="text-[20px]">Введите вашу почту</h1>
-
+        
         <h1 className="text-green-500">{resetNotification}</h1>
-        {wrongEmail && emailError && (
-          <div style={{ color: "red", fontSize: "15px" }}>{emailError}</div>
-        )}
+        {(wrongEmail && emailError) && <div style={{color:'red', fontSize:"15px"}}>{emailError}</div>}
         <input
-          className="bg-gray-200 rounded-md"
+          className="bg-gray-200 rounded-[5px]"
           type="text"
           name=" email"
           placeholder=" email"
-          onChange={(e) => emailHandler(e)}
-          onBlur={(e) => blurHandler(e)}
-        />
+          onChange={e => emailHandler(e)}
+          onBlur={e => blurHandler(e)}
+        ></input>
         <h1 className="text-red-500">{resetError}</h1>
         <h1 className="text-red-500">{emailError}</h1>
         <button
           className="bg-blue-300 p-2 rounded-[5px]"
-          onClick={() => resetPassword()}
+          onClick={resetPassword}
           disabled={!formValid}
         >
-          Восстановить пароль
+          восстановить пароль
         </button>
+        
       </div>
     </div>
   );
-};
+  };
 
 export default ResetPassword;
+
+
 
 {
   /* <exitCross onClick={handleCloseClick}/>  
