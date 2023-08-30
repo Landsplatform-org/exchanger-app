@@ -2,12 +2,17 @@ import { MdAddBox, MdEditSquare } from "react-icons/md";
 
 import { BsFillTrashFill } from "react-icons/bs";
 import Container from "@/hoc/Container";
+import type { Direction } from "@/interfaces/Direction";
 import { IoMdSwap } from "react-icons/io";
+import type { MainSearchParams } from "@/interfaces/MainSearchParams";
+import NoInfo from "@/components/NoInfo";
 import React from "react";
 import Wrapper from "@/hoc/Wrapper";
-import { directionsData } from "@/config/directions-data";
+import { useGetAdminData } from "@/hooks/useGetAdminData";
 
-const page = () => {
+const Directions = async ({ searchParams }: { searchParams: MainSearchParams }) => {
+  const directions = await useGetAdminData(searchParams, "directions");
+
   return (
     <Wrapper position="flex-end">
       <Container>
@@ -38,15 +43,16 @@ const page = () => {
                 <th className="w-[360px] text-end">Действия</th>
               </tr>
             </thead>
-            {directionsData.map((item: any) => (
-              <tbody key={item.date}>
+            {!directions.length && <NoInfo />}
+            {directions.map((direction: Direction) => (
+              <tbody key={direction.id}>
                 <tr className="flex items-center justify-center gap-10 px-2 py-1 my-2 rounded-md border border-1 border-gray-200">
-                  <td className="w-[165px]">{item.date}</td>
+                  <td className="w-[165px]">{direction.created_at}</td>
                   <td className="w-[260px]">
-                    {item.direction_from} {item.currency_from} &rarr;{" "}
-                    {item.direction_to} {item.currency_to}
+                    {direction.currency_id_send} &rarr;{" "}
+                    {direction.currency_id_receive}
                   </td>
-                  {item.status ? (
+                  {direction.is_active ? (
                     <>
                       <td className="flex items-center justify-center w-[70px]">
                         <div className="w-[25px] h-[25px] rounded-full bg-green-500"></div>
@@ -60,15 +66,15 @@ const page = () => {
                     </>
                   )}
                   <td className="w-[320px]">
-                    {item.rate_from} {item.currency_from} &rarr; {item.rate_to}{" "}
-                    {item.currency_to} {" "}
+                    {direction.rate_out} {direction.currency_id_send} &rarr; {direction.rate_in}{" "}
+                    {direction.currency_id_receive} {" "}
                     <span className="rounded-md p-1 bg-[#0cc6c9] text-white font-bold text-sm">
                       Bestchange
                     </span>
                   </td>
                   <td className="w-[160px]">
                     <span className="rounded-md p-1 bg-blue-600 text-white font-bold text-sm">
-                      {item.process}
+                      {direction.process_type_id}
                     </span>
                   </td>
                   <td className="w-[360px] flex items-end justify-end gap-2 text-white text-xl">
@@ -93,4 +99,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Directions;

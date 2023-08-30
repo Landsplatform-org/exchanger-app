@@ -1,32 +1,14 @@
 import Container from "@/hoc/Container";
+import { MainSearchParams } from "@/interfaces/MainSearchParams";
 import { MdAddBox } from "react-icons/md";
 import UserSearchInput from "./_components/UserSearchInput";
-import type { UserSearchParams } from "@/interfaces/UserSearchParams";
 import Users from "./_components/Users";
 import UsersHeader from "./_components/UsersHeader";
 import Wrapper from "@/hoc/Wrapper";
-import axios from "axios";
-import queryString from "query-string";
+import { useGetAdminData } from "@/hooks/useGetAdminData";
 
-const getUsers = async (searchParams: UserSearchParams) => {
-  const urlParams = {
-    username: searchParams.username,
-    limit: searchParams.limit,
-    page: searchParams.page,
-  };
-  
-  const searchQuery = queryString.stringify(urlParams);
-
-  const response = await axios.get(
-    `http://localhost:5000/api/users/get?${searchQuery}`
-  );
-  const data = response.data.data;
-
-  return data;
-};
-
-const UsersPage = async ({ searchParams }: { searchParams: UserSearchParams }) => {
-  const users = await getUsers(searchParams);
+const UsersPage = async ({ searchParams }: { searchParams: MainSearchParams }) => {
+  const users = await useGetAdminData(searchParams, "users");
 
   return (
     <Wrapper position="flex-end">
