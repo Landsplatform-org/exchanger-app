@@ -1,39 +1,22 @@
 import Container from "@/hoc/Container";
+import ExchangesTable from "../../../components/ExchangesTable";
+import { MainSearchParams } from "@/interfaces/MainSearchParams";
 import Nav from "./_components/Nav";
 import React from "react";
-import Table from "../../../components/AdminTable";
 import Wrapper from "@/hoc/Wrapper";
-import axios from "axios";
+import { useGetAdminData } from "@/hooks/useGetAdminData";
 
-const getExchanges = async () => {
-  //searchParams: any
-  // const urlParams = {
-  //   username: searchParams.username,
-  //   limit: searchParams.limit,
-  //   page: searchParams.page,
-  // };
-  
-  // const searchQuery = queryString.stringify(urlParams);
-
-  const response = await axios.get(
-    `http://localhost:5000/api/exchanges/get`
-  );
-  const data = response.data.data;
-
-  return data;
-};
-
-const page = async () => {
-  const exchanges = await getExchanges();
+const Exchanges = async ({ searchParams }: { searchParams: MainSearchParams }) => {
+  const exchanges = await useGetAdminData(searchParams, "exchanges");
   
   return (
     <Wrapper position="flex-end">
       <Container>
         <Nav />
-        <Table exchanges={exchanges}/>
+        <ExchangesTable exchanges={exchanges}/>
       </Container>
     </Wrapper>
   );
 };
 
-export default page;
+export default Exchanges;

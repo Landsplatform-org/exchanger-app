@@ -1,10 +1,15 @@
 import Container from '@/hoc/Container'
 import Link from 'next/link'
+import type { MainSearchParams } from '@/interfaces/MainSearchParams'
+import NoInfo from '@/components/NoInfo'
+import type { ParserLog } from '@/interfaces/ParserLog'
 import React from 'react'
 import Wrapper from '@/hoc/Wrapper'
-import { sourcesData } from '@/config/sources-data'
+import { useGetAdminData } from '@/hooks/useGetAdminData'
 
-const page = () => {
+const Sources = async ({ searchParams }: { searchParams: MainSearchParams }) => {
+  const sources = await useGetAdminData(searchParams, "parser-logs");
+
   return (
     <Wrapper position="flex-end">
     <Container>
@@ -18,11 +23,12 @@ const page = () => {
               <th className="w-[800px] text-end">Обновлено</th>
             </tr>
           </thead>
-          {sourcesData.map((item: any) => (
-            <tbody key={item.id}>
+          {!sources.length && <NoInfo />}
+          {sources.map((source: ParserLog) => (
+            <tbody key={source.id}>
               <tr className="flex items-center gap-10 px-2 py-1 my-2 rounded-md border border-1 border-gray-200">
-                <td className="w-[400px]"><Link href="#" className='text-blue-500 hover:text-blue-700 transition-colors duration-200'>{item.id}</Link></td>
-                <td className="w-[250px]">{item.name}</td>
+                <td className="w-[400px]"><Link href="#" className='text-blue-500 hover:text-blue-700 transition-colors duration-200'>{source.id}</Link></td>
+                <td className="w-[250px]">{source.name}</td>
                 <td className="w-[800px] flex items-end justify-end gap-2 text-white">
                   <button className="bg-[#0cc6c9] p-2 hover:brightness-90 transition-all duration-200 rounded-md">Обновить</button>
                 </td>
@@ -36,4 +42,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Sources;

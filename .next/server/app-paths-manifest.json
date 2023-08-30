@@ -1,0 +1,9 @@
+{
+  "/(admin)/exchanges/page": "app/(admin)/exchanges/page.js",
+  "/(admin)/promo/page": "app/(admin)/promo/page.js",
+  "/(admin)/dashboard/page": "app/(admin)/dashboard/page.js",
+  "/(admin)/bestchange/page": "app/(admin)/bestchange/page.js",
+  "/(admin)/admin-data/feedback/page": "app/(admin)/admin-data/feedback/page.js",
+  "/(admin)/admin-data/faq-categories/page": "app/(admin)/admin-data/faq-categories/page.js",
+  "/(admin)/admin-data/faq/page": "app/(admin)/admin-data/faq/page.js"
+}

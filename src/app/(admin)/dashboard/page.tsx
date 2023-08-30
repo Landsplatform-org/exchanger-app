@@ -1,15 +1,19 @@
 import { FaHandshake, FaRubleSign } from "react-icons/fa";
 
-import AdminTable from "../../../components/AdminTable";
 import { AiFillEye } from "react-icons/ai";
 import { BsFillPlayFill } from "react-icons/bs";
 import Card from "../../../components/Card";
 import Container from "@/hoc/Container";
+import ExchangesTable from "../../../components/ExchangesTable";
 import { GrTransaction } from "react-icons/gr";
+import { MainSearchParams } from "@/interfaces/MainSearchParams";
 import Row from "@/hoc/Row";
 import Wrapper from "@/hoc/Wrapper";
+import { useGetAdminData } from "@/hooks/useGetAdminData";
 
-const Dashboard = () => {
+const Dashboard = async ({ searchParams }: { searchParams: MainSearchParams }) => {
+  const exchanges = await useGetAdminData(searchParams, "exchanges");
+
   return (
     <Wrapper position="flex-end">
       <Container>
@@ -27,7 +31,7 @@ const Dashboard = () => {
             <FaRubleSign />
           </Card>
         </Row>
-        <AdminTable />
+        <ExchangesTable exchanges={exchanges} />
         {/* <Row>
           <Card 
             name="Ожидают подтверждения" 

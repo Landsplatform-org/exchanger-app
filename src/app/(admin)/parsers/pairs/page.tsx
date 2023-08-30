@@ -1,12 +1,17 @@
 import { BsFillTrashFill } from "react-icons/bs";
 import Container from "@/hoc/Container";
 import { IoMdSwap } from "react-icons/io";
+import type { MainSearchParams } from "@/interfaces/MainSearchParams";
 import { MdAddBox } from "react-icons/md";
+import NoInfo from "@/components/NoInfo";
+import type { ParserPair } from "@/interfaces/ParserPair";
 import React from "react";
 import Wrapper from "@/hoc/Wrapper";
-import { pairsData } from "@/config/pairs-data";
+import { useGetAdminData } from "@/hooks/useGetAdminData";
 
-const page = () => {
+const Pairs = async ({ searchParams }: { searchParams: MainSearchParams }) => {
+  const pairs = await useGetAdminData(searchParams, "parser-pairs");
+
   return (
     <Wrapper position="flex-end">
       <Container>
@@ -35,6 +40,9 @@ const page = () => {
           <table className="mt-6">
             <thead>
               <tr className="flex items-center gap-10 p-2 rounded-md shadow-md">
+                <th className="w-[50px] text-start">
+                  <input type="checkbox" />
+                </th>
                 <th className="w-[100px] text-start">ID</th>
                 <th className="w-[120px] text-start">Источник</th>
                 <th className="w-[200px] text-start">Заголовок</th>
@@ -44,16 +52,17 @@ const page = () => {
                 <th className="w-[150px] text-start">Код</th>
               </tr>
             </thead>
-            {pairsData.map((item: any) => (
-              <tbody key={item.id}>
+            {!pairs.length && <NoInfo />}
+            {pairs.map((pair: ParserPair) => (
+              <tbody key={pair.id}>
                 <tr className="flex items-center gap-10 px-2 py-1 my-2 rounded-md border border-1 border-gray-200">
-                  <td className="w-[100px]">{item.source_id}</td>
-                  <td className="w-[120px]">{item.source}</td>
-                  <td className="w-[200px]">{item.title}</td>
-                  <td className="w-[200px]">{item.pair}</td>
-                  <td className="w-[100px]">{item.nominal}</td>
-                  <td className="w-[250px]">{item.rate}</td>
-                  <td className="w-[150px]">{item.code}</td>
+                  <td className="w-[100px]">{pair.id}</td>
+                  <td className="w-[120px]">{pair.parse_source_id}</td>
+                  <td className="w-[200px]">{pair.parse_title}</td>
+                  <td className="w-[200px]">{pair.parse_pair}</td>
+                  <td className="w-[100px]">{pair.parse_nominal}</td>
+                  <td className="w-[250px]">{pair.parse_course}</td>
+                  <td className="w-[150px]">{pair.parse_code}</td>
                 </tr>
               </tbody>
             ))}
@@ -64,4 +73,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Pairs;
