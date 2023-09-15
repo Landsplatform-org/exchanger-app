@@ -1,4 +1,4 @@
-// File: F:\.job-projects\next-exchanger-app\exchanger-app\src\app\(admin)\gateways\list\page.tsx
+// File: F:\.web\.job-projects\next-exchanger-app\exchanger-app\src\app\(admin)\gateways\list\page.tsx
 import * as entry from '../../../../../../src/app/(admin)/gateways/list/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,20 +1,20 @@
 import { BsFillTrashFill } from "react-icons/bs";
-import Container from "@/hoc/Container";
-import type { MainSearchParams } from "@/interfaces/MainSearchParams";
+import Container from "@/components/Container";
+import { type SearchParams } from "@/@types/SearchParams";
 import { MdEditSquare } from "react-icons/md";
-import type { News } from "@/interfaces/News";
+import { type News } from "@/@types/News";
 import NoInfo from "@/components/NoInfo";
 import React from "react";
-import Wrapper from "@/hoc/Wrapper";
-import { useGetAdminData } from "@/hooks/useGetAdminData";
+import Wrapper from "@/components/Wrapper";
+import { useGetData } from "@/hooks/useGetData";
 
-const NewsPage = async ({ searchParams }: { searchParams: MainSearchParams }) => {
-  const news = await useGetAdminData(searchParams, "news");
+const NewsPage = async ({ searchParams }: { searchParams: SearchParams }) => {
+  const news = await useGetData(searchParams, "news");
 
   return (
-    <Wrapper position="flex-end">
+    <Wrapper position="center">
       <Container>
-        <div className="w-full bg-white p-4 rounded-md shadow-lg text-gray-500">
+        <div className="bg-white p-4 rounded-md shadow-lg text-gray-500">
           <h3 className="font-bold text-blue-400">Новости</h3>
           <table className="mt-6">
             <thead>

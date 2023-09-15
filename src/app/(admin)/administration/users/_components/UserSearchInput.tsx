@@ -9,14 +9,14 @@ import { useRouter } from "next/navigation";
 
 const UserSearchInput = () => {
   const router = useRouter();
-
+  
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     const encodedSearchQuery = encodeURI(searchQuery);
-    router.push(`/administration/users/?username=${encodedSearchQuery}`);
+    router.push(`?username=${encodedSearchQuery}`);
   };
 
   return (

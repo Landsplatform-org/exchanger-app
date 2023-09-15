@@ -1,21 +1,21 @@
 import { BsFillPlayFill, BsFillTrashFill, BsStopFill } from "react-icons/bs";
 
-import Container from "@/hoc/Container";
-import type { Gateway } from "@/interfaces/Gateway";
-import type { MainSearchParams } from "@/interfaces/MainSearchParams";
+import Container from "@/components/Container";
+import { type Gateway } from "@/@types/Gateway";
+import { type SearchParams } from "@/@types/SearchParams";
 import { MdEditSquare } from "react-icons/md";
 import NoInfo from "@/components/NoInfo";
 import React from "react";
-import Wrapper from "@/hoc/Wrapper";
-import { useGetAdminData } from "@/hooks/useGetAdminData";
+import Wrapper from "@/components/Wrapper";
+import { useGetData } from "@/hooks/useGetData";
 
-const Gateways = async ({ searchParams }: { searchParams: MainSearchParams }) => {
-  const gateways = await useGetAdminData(searchParams, "gateways");
+const Gateways = async ({ searchParams }: { searchParams: SearchParams }) => {
+  const gateways = await useGetData(searchParams, "gateways");
 
   return (
-    <Wrapper position="flex-end">
+    <Wrapper position="center">
       <Container>
-        <div className="w-full bg-white p-4 rounded-md shadow-lg text-gray-500">
+        <div className="bg-white p-4 rounded-md shadow-lg text-gray-500">
           <h3 className="font-bold text-blue-400">Шлюзы</h3>
           <table className="mt-6">
             <thead>
@@ -39,13 +39,19 @@ const Gateways = async ({ searchParams }: { searchParams: MainSearchParams }) =>
                       </td>
                       <td className="w-[600px] flex items-end justify-end gap-2 text-white text-xl">
                         <button className="bg-[#0cc6c9] p-2 hover:brightness-90 transition-all duration-200 rounded-md">
-                          <i><MdEditSquare /></i>
+                          <i>
+                            <MdEditSquare />
+                          </i>
                         </button>
                         <button className="bg-yellow-400 p-2 hover:brightness-90 transition-all duration-200 rounded-md">
-                          <i><BsStopFill /></i>
+                          <i>
+                            <BsStopFill />
+                          </i>
                         </button>
                         <button className="bg-red-500 p-2 hover:brightness-90 transition-all duration-200 rounded-md">
-                          <i><BsFillTrashFill /></i>
+                          <i>
+                            <BsFillTrashFill />
+                          </i>
                         </button>
                       </td>
                     </>
@@ -56,7 +62,9 @@ const Gateways = async ({ searchParams }: { searchParams: MainSearchParams }) =>
                       </td>
                       <td className="w-[600px] flex items-center justify-end gap-2 text-white text-xl">
                         <button className="bg-green-400 p-2 hover:brightness-90 transition-all duration-200 rounded-md">
-                            <i><BsFillPlayFill /></i>
+                          <i>
+                            <BsFillPlayFill />
+                          </i>
                         </button>
                       </td>
                     </>

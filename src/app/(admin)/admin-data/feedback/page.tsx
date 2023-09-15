@@ -1,21 +1,21 @@
 import { BsFillTrashFill } from "react-icons/bs";
-import Container from "@/hoc/Container";
-import type { Feedback } from "@/interfaces/Feedback";
-import type { MainSearchParams } from "@/interfaces/MainSearchParams";
+import Container from "@/components/Container";
+import { type Feedback } from "@/@types/Feedback";
+import { type SearchParams } from "@/@types/SearchParams";
 import { MdEditSquare } from "react-icons/md";
 import NoInfo from "@/components/NoInfo";
 import React from "react";
-import Wrapper from "@/hoc/Wrapper";
-import { useGetAdminData } from "@/hooks/useGetAdminData";
+import Wrapper from "@/components/Wrapper";
+import { useGetData } from "@/hooks/useGetData";
 
-const FeedbackPage = async ({ searchParams }: { searchParams: MainSearchParams }) => {
-  const feedbacks = await useGetAdminData(searchParams, "reviews");
+const FeedbackPage = async ({ searchParams }: { searchParams: SearchParams }) => {
+  const feedbacks = await useGetData(searchParams, "reviews");
 
   return (
-    <Wrapper position="flex-end">
+    <Wrapper position="center">
       <Container>
         <form action="submit">
-          <div className="w-full bg-white p-4 rounded-md shadow-lg text-gray-500">
+          <div className="bg-white p-4 rounded-md shadow-lg text-gray-500">
             <h3 className="font-bold text-blue-400">Отзывы</h3>
             <table className="mt-6">
               <thead>

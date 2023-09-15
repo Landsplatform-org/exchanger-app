@@ -1,15 +1,31 @@
 {
   "pages": {
-    "/page": [
+    "/home/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/home/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/auth/signIn/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/auth/signIn/page.js"
+    ],
+    "/user/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/user/[id]/page.css",
+      "static/chunks/app/user/[id]/page.js"
+    ],
+    "/auth/signOut/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/auth/signOut/page.js"
     ],
     "/(admin)/layout": [
       "static/chunks/webpack.js",
@@ -21,85 +37,31 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(admin)/dashboard/page.js"
     ],
-    "/(admin)/directions/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/directions/page.js"
-    ],
     "/(admin)/exchanges/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(admin)/exchanges/page.js"
     ],
+    "/(admin)/administration/users/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(admin)/administration/users/page.js"
+    ],
+    "/(techsupport)/user-support/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(techsupport)/user-support/page.css",
+      "static/chunks/app/(techsupport)/user-support/page.js"
+    ],
+    "/(admin)/directions/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(admin)/directions/page.js"
+    ],
     "/(admin)/gateways/list/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(admin)/gateways/list/page.js"
-    ],
-    "/(admin)/gateways/currencies/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/gateways/currencies/page.js"
-    ],
-    "/(admin)/parsers/sources/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/parsers/sources/page.js"
-    ],
-    "/(admin)/parsers/pairs/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/parsers/pairs/page.js"
-    ],
-    "/(admin)/partnership/statistics/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/partnership/statistics/page.js"
-    ],
-    "/(admin)/partnership/referrals/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/partnership/referrals/page.js"
-    ],
-    "/(admin)/partnership/settings/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/partnership/settings/page.js"
-    ],
-    "/(admin)/admin-data/news/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/admin-data/news/page.js"
-    ],
-    "/(admin)/admin-data/page-settings/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/admin-data/page-settings/page.js"
-    ],
-    "/(admin)/admin-data/feedback/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/admin-data/feedback/page.js"
-    ],
-    "/(admin)/admin-data/faq-categories/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/admin-data/faq-categories/page.js"
-    ],
-    "/(admin)/admin-data/faq/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/admin-data/faq/page.js"
-    ],
-    "/(admin)/bestchange/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/bestchange/page.js"
-    ],
-    "/(admin)/promo/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/promo/page.js"
     ]
   }
 }

@@ -1,19 +1,16 @@
-import Container from "@/hoc/Container";
-import { MainSearchParams } from "@/interfaces/MainSearchParams";
+import Container from "@/components/Container";
+import { type SearchParams } from "@/@types/SearchParams";
 import { MdAddBox } from "react-icons/md";
 import UserSearchInput from "./_components/UserSearchInput";
 import Users from "./_components/Users";
 import UsersHeader from "./_components/UsersHeader";
-import Wrapper from "@/hoc/Wrapper";
-import { useGetAdminData } from "@/hooks/useGetAdminData";
+import Wrapper from "@/components/Wrapper";
 
-const UsersPage = async ({ searchParams }: { searchParams: MainSearchParams }) => {
-  const users = await useGetAdminData(searchParams, "users");
-
+const UsersPage = ({ searchParams }: { searchParams: SearchParams }) => {
   return (
-    <Wrapper position="flex-end">
+    <Wrapper position="center">
       <Container>
-        <div className="flex flex-col gap-4 w-full bg-white p-4 rounded-md shadow-lg text-gray-500">
+        <div className="flex flex-col gap-4 bg-white p-4 rounded-md shadow-lg text-gray-500">
           <h3 className="font-bold text-blue-400">Список пользователей</h3>
           <div className="flex gap-2">
             <button className="w-max flex gap-2 items-center justify-center text-white bg-green-500 px-4 py-2 rounded-md hover:brightness-90 transition-all duration-200">
@@ -26,7 +23,7 @@ const UsersPage = async ({ searchParams }: { searchParams: MainSearchParams }) =
           <UserSearchInput />
           <table className="mt-6">
             <UsersHeader />
-            <Users users={users} />
+            <Users searchParams={searchParams} />
           </table>
         </div>
       </Container>

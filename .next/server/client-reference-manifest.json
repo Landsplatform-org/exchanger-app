@@ -40,9 +40,57 @@
         "async": false
       }
     },
+    "(app-client)/./src/app/home/_components/ExchangeWindow.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/home/_components/ExchangeWindow.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./src/components/NavBar.tsx": {
       "*": {
         "id": "(sc_client)/./src/components/NavBar.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/Providers.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/Providers.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/auth/signIn/_components/LoginForm.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/auth/signIn/_components/LoginForm.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/user/[id]/_components/Profile.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/user/[id]/_components/Profile.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/auth/signOut/_components/LogoutForm.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/auth/signOut/_components/LogoutForm.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -56,17 +104,33 @@
         "async": false
       }
     },
-    "(app-client)/./node_modules/next/dist/client/link.js": {
+    "(app-client)/./src/components/ExchangesTable.tsx": {
       "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "id": "(sc_client)/./src/components/ExchangesTable.tsx",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./src/app/(admin)/admin-data/faq/_components/FAQSearchInput.tsx": {
+    "(app-client)/./src/app/(admin)/administration/users/_components/UserSearchInput.tsx": {
       "*": {
-        "id": "(sc_client)/./src/app/(admin)/admin-data/faq/_components/FAQSearchInput.tsx",
+        "id": "(sc_client)/./src/app/(admin)/administration/users/_components/UserSearchInput.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/(admin)/administration/users/_components/Users.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/(admin)/administration/users/_components/Users.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/(techsupport)/user-support/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/(techsupport)/user-support/page.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -75,7 +139,7 @@
   },
   "edgeSSRModuleMapping": {},
   "clientModules": {
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -83,7 +147,7 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -91,7 +155,7 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\components\\app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -99,7 +163,7 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -107,7 +171,7 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
       "name": "*",
       "chunks": [
@@ -115,7 +179,7 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
       "name": "*",
       "chunks": [
@@ -123,7 +187,7 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "*",
       "chunks": [
@@ -131,7 +195,7 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "*",
       "chunks": [
@@ -139,7 +203,7 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
       "name": "*",
       "chunks": [
@@ -147,7 +211,7 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
       "name": "*",
       "chunks": [
@@ -155,7 +219,15 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\font\\google\\target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\home\\_components\\ExchangeWindow.tsx": {
+      "id": "(app-client)/./src/app/home/_components/ExchangeWindow.tsx",
+      "name": "*",
+      "chunks": [
+        "app/home/page:static/chunks/app/home/page.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\font\\google\\target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": {
       "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}",
       "name": "*",
       "chunks": [
@@ -163,7 +235,7 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\components\\NavBar.tsx": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\components\\NavBar.tsx": {
       "id": "(app-client)/./src/components/NavBar.tsx",
       "name": "*",
       "chunks": [
@@ -171,7 +243,15 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\globals.css": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\components\\Providers.tsx": {
+      "id": "(app-client)/./src/components/Providers.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\globals.css": {
       "id": "(app-client)/./src/app/globals.css",
       "name": "*",
       "chunks": [
@@ -179,7 +259,95 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\components\\SideBar.tsx": {
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\auth\\signIn\\_components\\LoginForm.tsx": {
+      "id": "(app-client)/./src/app/auth/signIn/_components/LoginForm.tsx",
+      "name": "*",
+      "chunks": [
+        "app/auth/signIn/page:static/chunks/app/auth/signIn/page.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "app/(admin)/layout:static/chunks/app/(admin)/layout.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "app/(admin)/layout:static/chunks/app/(admin)/layout.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "app/(admin)/layout:static/chunks/app/(admin)/layout.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "app/(admin)/layout:static/chunks/app/(admin)/layout.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "app/(admin)/layout:static/chunks/app/(admin)/layout.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "app/(admin)/layout:static/chunks/app/(admin)/layout.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\shared\\lib\\lazy-dynamic\\dynamic-no-ssr.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js",
+      "name": "*",
+      "chunks": [
+        "app/(admin)/layout:static/chunks/app/(admin)/layout.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\shared\\lib\\lazy-dynamic\\dynamic-no-ssr.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js",
+      "name": "*",
+      "chunks": [
+        "app/(admin)/layout:static/chunks/app/(admin)/layout.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\user\\[id]\\_components\\Profile.tsx": {
+      "id": "(app-client)/./src/app/user/[id]/_components/Profile.tsx",
+      "name": "*",
+      "chunks": [
+        "app/user/[id]/page:static/chunks/app/user/[id]/page.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\auth\\signOut\\_components\\LogoutForm.tsx": {
+      "id": "(app-client)/./src/app/auth/signOut/_components/LogoutForm.tsx",
+      "name": "*",
+      "chunks": [
+        "app/auth/signOut/page:static/chunks/app/auth/signOut/page.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\components\\SideBar.tsx": {
       "id": "(app-client)/./src/components/SideBar.tsx",
       "name": "*",
       "chunks": [
@@ -187,53 +355,57 @@
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\client\\link.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\components\\ExchangesTable.tsx": {
+      "id": "(app-client)/./src/components/ExchangesTable.tsx",
       "name": "*",
       "chunks": [
-        "app/(admin)/bestchange/page:static/chunks/app/(admin)/bestchange/page.js"
+        "app/(admin)/exchanges/page:static/chunks/app/(admin)/exchanges/page.js"
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\node_modules\\next\\dist\\esm\\client\\link.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\administration\\users\\_components\\UserSearchInput.tsx": {
+      "id": "(app-client)/./src/app/(admin)/administration/users/_components/UserSearchInput.tsx",
       "name": "*",
       "chunks": [
-        "app/(admin)/bestchange/page:static/chunks/app/(admin)/bestchange/page.js"
+        "app/(admin)/administration/users/page:static/chunks/app/(admin)/administration/users/page.js"
       ],
       "async": false
     },
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\admin-data\\faq\\_components\\FAQSearchInput.tsx": {
-      "id": "(app-client)/./src/app/(admin)/admin-data/faq/_components/FAQSearchInput.tsx",
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\administration\\users\\_components\\Users.tsx": {
+      "id": "(app-client)/./src/app/(admin)/administration/users/_components/Users.tsx",
       "name": "*",
       "chunks": [
-        "app/(admin)/admin-data/faq/page:static/chunks/app/(admin)/admin-data/faq/page.js"
+        "app/(admin)/administration/users/page:static/chunks/app/(admin)/administration/users/page.js"
+      ],
+      "async": false
+    },
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(techsupport)\\user-support\\page.tsx": {
+      "id": "(app-client)/./src/app/(techsupport)/user-support/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(techsupport)/user-support/page:static/chunks/app/(techsupport)/user-support/page.js"
       ],
       "async": false
     }
   },
   "entryCSSFiles": {
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\layout": [
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\home\\page": [],
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\layout": [
       "static/css/app/layout.css"
     ],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\layout": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\dashboard\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\directions\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\exchanges\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\gateways\\list\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\gateways\\currencies\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\parsers\\sources\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\parsers\\pairs\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\partnership\\statistics\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\partnership\\referrals\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\partnership\\settings\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\admin-data\\news\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\admin-data\\page-settings\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\admin-data\\feedback\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\admin-data\\faq-categories\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\admin-data\\faq\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\bestchange\\page": [],
-    "F:\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\promo\\page": []
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\auth\\signIn\\page": [],
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\user\\[id]\\page": [
+      "static/css/app/user/[id]/page.css"
+    ],
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\auth\\signOut\\page": [],
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\layout": [],
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\dashboard\\page": [],
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\exchanges\\page": [],
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\administration\\users\\page": [],
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(techsupport)\\user-support\\page": [
+      "static/css/app/(techsupport)/user-support/page.css"
+    ],
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\directions\\page": [],
+    "F:\\.web\\.job-projects\\next-exchanger-app\\exchanger-app\\src\\app\\(admin)\\gateways\\list\\page": []
   }
 }
