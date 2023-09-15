@@ -4,11 +4,11 @@ import { MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
 
 import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
-import { links } from "@/config/links";
+import { sidebarLinks } from "@/config/sidebar-links";
 
 const SideBar = () => {
   return (
-    <div className="fixed flex flex-col px-4 py-2 gap-2 w-max h-screen bg-gradient-to-b from-indigo-400 to-blue-600 text-white font-medium z-20">
+    <div className="flex flex-col px-4 py-2 gap-2 w-max h-screen bg-gradient-to-b from-indigo-400 to-blue-600 text-white font-medium z-20">
       <h1 className="my-4 font-bold text-md text-center">NEXTJS</h1>
 
       <hr className="opacity-[0.6] rounded-md" />
@@ -32,7 +32,7 @@ const SideBar = () => {
         Направления
       </Link>
 
-      {links.map((section) => (
+      {sidebarLinks.map((section) => (
         <Disclosure key={section.id}>
           {({ open }) => (
             <>

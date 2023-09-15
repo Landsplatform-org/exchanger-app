@@ -3,7 +3,7 @@
 import React, { FormEvent, useState } from "react";
 
 import { AiOutlineSearch } from "react-icons/ai";
-import Row from "@/hoc/Row";
+import Row from "@/components/Row";
 import { useRouter } from "next/navigation";
 
 const FAQSearchInput = () => {

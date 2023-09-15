@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 interface CardProps {
   name: string;
@@ -7,9 +7,9 @@ interface CardProps {
   children?: ReactNode;
 }
 
-const Card: FC<CardProps> = ({ name, data, color, children }) => {
+const Card: React.FC<CardProps> = ({ name, data, color, children }) => {
   return (
-    <div className="w-[380px] h-[100px] flex flex-row items-center rounded-md bg-white shadow-lg">
+    <div className="w-[340px] h-[100px] flex flex-row items-center rounded-md bg-white shadow-lg">
       <div style={{ background: color }} className="w-[4px] h-full rounded-l-md"></div>
       <div className="flex flex-col w-[330px] pl-4">
         <h3 style={{ color: color }} className="font-normal uppercase text-sm">{name}</h3>

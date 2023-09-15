@@ -1,23 +1,25 @@
 import { MdAddBox, MdEditSquare } from "react-icons/md";
 
 import { BsFillTrashFill } from "react-icons/bs";
-import Container from "@/hoc/Container";
-import type { Currency } from "@/interfaces/Currency";
-import type { MainSearchParams } from "@/interfaces/MainSearchParams";
+import Container from "@/components/Container";
+import { type Currency } from "@/@types/Currency";
+import { type SearchParams } from "@/@types/SearchParams";
 import React from "react";
-import Wrapper from "@/hoc/Wrapper";
-import { useGetAdminData } from "@/hooks/useGetAdminData";
+import Wrapper from "@/components/Wrapper";
+import { useGetData } from "@/hooks/useGetData";
 
-const Currencies = async ({ searchParams }: { searchParams: MainSearchParams }) => {
-  const currecies = await useGetAdminData(searchParams, "currencies");
+const Currencies = async ({ searchParams }: { searchParams: SearchParams }) => {
+  const currecies = await useGetData(searchParams, "currencies");
 
   return (
-    <Wrapper position="flex-end">
+    <Wrapper position="center">
       <Container>
-        <div className="flex flex-col gap-4 w-full bg-white p-4 rounded-md shadow-lg text-gray-500">
+        <div className="flex flex-col gap-4 bg-white p-4 rounded-md shadow-lg text-gray-500">
           <h3 className="font-bold text-blue-400">Валюты</h3>
           <button className="w-max flex gap-2 items-center justify-center text-white bg-green-500 px-4 py-2 rounded-md hover:brightness-90 transition-all duration-200">
-            <i className="text-xl"><MdAddBox /></i>
+            <i className="text-xl">
+              <MdAddBox />
+            </i>
             <span>Добавить</span>
           </button>
           <table className="mt-6">
@@ -28,7 +30,9 @@ const Currencies = async ({ searchParams }: { searchParams: MainSearchParams }) 
                 <th className="w-[100px] text-start">Валюта</th>
                 <th className="w-[120px] text-start">Резерв</th>
                 <th className="w-[200px] text-center">Отправка по умолчанию</th>
-                <th className="w-[207px] text-center">Получение по умолчанию</th>
+                <th className="w-[207px] text-center">
+                  Получение по умолчанию
+                </th>
                 <th className="w-[500px] text-end">Действия</th>
               </tr>
             </thead>

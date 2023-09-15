@@ -1,9 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/home",
+        permanent: true,
+      },
+    ];
+  },
   reactStrictMode: true,
   images: {
     domains: ["localhost"],
   },
 };
-
-module.exports = nextConfig;

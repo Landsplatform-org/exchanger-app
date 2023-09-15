@@ -1,12 +1,10 @@
-import Container from "@/hoc/Container";
-import Wrapper from "@/hoc/Wrapper";
+import Container from "@/components/Container";
+import Wrapper from "@/components/Wrapper";
 
-export default function Home() {
+export default function App() {
   return (
     <Wrapper position="center">
       <Container>
-        <span>helloo</span>
-        <span>helloo</span>
       </Container>
     </Wrapper>
   );

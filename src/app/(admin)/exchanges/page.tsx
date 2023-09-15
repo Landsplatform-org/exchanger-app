@@ -1,19 +1,14 @@
-import Container from "@/hoc/Container";
+import Container from "@/components/Container";
 import ExchangesTable from "../../../components/ExchangesTable";
-import { MainSearchParams } from "@/interfaces/MainSearchParams";
-import Nav from "./_components/Nav";
+import { type SearchParams } from "@/@types/SearchParams";
 import React from "react";
-import Wrapper from "@/hoc/Wrapper";
-import { useGetAdminData } from "@/hooks/useGetAdminData";
+import Wrapper from "@/components/Wrapper";
 
-const Exchanges = async ({ searchParams }: { searchParams: MainSearchParams }) => {
-  const exchanges = await useGetAdminData(searchParams, "exchanges");
-  
+const Exchanges = async ({ searchParams }: { searchParams: SearchParams }) => {
   return (
-    <Wrapper position="flex-end">
+    <Wrapper position="center">
       <Container>
-        <Nav />
-        <ExchangesTable exchanges={exchanges}/>
+        <ExchangesTable searchParams={searchParams} />
       </Container>
     </Wrapper>
   );

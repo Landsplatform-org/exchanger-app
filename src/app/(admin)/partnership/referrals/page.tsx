@@ -1,12 +1,12 @@
-import Container from "@/hoc/Container";
+import Container from "@/components/Container";
 import React from "react";
-import Wrapper from "@/hoc/Wrapper";
+import Wrapper from "@/components/Wrapper";
 
 const page = () => {
   return (
-    <Wrapper position="flex-end">
+    <Wrapper position="center">
       <Container>
-        <div className="flex flex-col gap-4 w-full bg-white p-4 rounded-md shadow-lg text-gray-500">
+        <div className="w-full flex flex-col gap-4 bg-white p-4 rounded-md shadow-lg text-gray-500">
           <div className="flex gap-10">
             <div className="w-max h-max py-3 bg-white rounded-md flex flex-col gap-2">
               <label htmlFor="statusSearch">Статус</label>

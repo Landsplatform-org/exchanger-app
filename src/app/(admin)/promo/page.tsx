@@ -1,6 +1,6 @@
-import Container from "@/hoc/Container";
+import Container from "@/components/Container";
 import React from "react";
-import Wrapper from "@/hoc/Wrapper";
+import Wrapper from "@/components/Wrapper";
 
 const page = () => {
   return (

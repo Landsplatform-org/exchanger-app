@@ -1,21 +1,21 @@
 import { BsFillTrashFill } from "react-icons/bs";
-import Container from "@/hoc/Container";
+import Container from "@/components/Container";
 import { IoMdSwap } from "react-icons/io";
-import type { MainSearchParams } from "@/interfaces/MainSearchParams";
+import { type SearchParams } from "@/@types/SearchParams";
 import { MdAddBox } from "react-icons/md";
 import NoInfo from "@/components/NoInfo";
-import type { ParserPair } from "@/interfaces/ParserPair";
+import { type ParserPair } from "@/@types/ParserPair";
 import React from "react";
-import Wrapper from "@/hoc/Wrapper";
-import { useGetAdminData } from "@/hooks/useGetAdminData";
+import Wrapper from "@/components/Wrapper";
+import { useGetData } from "@/hooks/useGetData";
 
-const Pairs = async ({ searchParams }: { searchParams: MainSearchParams }) => {
-  const pairs = await useGetAdminData(searchParams, "parser-pairs");
+const Pairs = async ({ searchParams }: { searchParams: SearchParams }) => {
+  const pairs = await useGetData(searchParams, "parser-pairs");
 
   return (
-    <Wrapper position="flex-end">
+    <Wrapper position="center">
       <Container>
-        <div className="flex flex-col gap-4 w-full bg-white p-4 rounded-md shadow-lg text-gray-500">
+        <div className="flex flex-col gap-4  bg-white p-4 rounded-md shadow-lg text-gray-500">
           <h3 className="font-bold text-blue-400">Пары</h3>
           <div className="flex gap-2">
             <button className="w-max flex gap-2 items-center justify-center text-white bg-green-500 px-4 py-2 rounded-md hover:brightness-90 transition-all duration-200">

@@ -1,11 +1,11 @@
-import Container from "@/hoc/Container";
+import Container from "@/components/Container";
 import React from "react";
 import SetttingsInput from "@/components/SetttingsInput";
-import Wrapper from "@/hoc/Wrapper";
+import Wrapper from "@/components/Wrapper";
 
 const page = () => {
   return (
-    <Wrapper position="flex-end">
+    <Wrapper position="center">
       <Container>
         <div className="w-full p-4 flex flex-col gap-8 justify-center bg-white shadow-lg rounded-md text-gray-500">
           <h3 className="font-bold text-blue-400">
